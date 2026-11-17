@@ -1,8 +1,3 @@
-def parse_dependency_files(value: str) -> List```
-
-Полный корректный файл:
-
-```python
 from pathlib import Path
 from typing import List, Set
 
