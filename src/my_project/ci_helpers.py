@@ -25,3 +25,4 @@ def parse_dependency_files(value: str) -> Listif not isinstance(value, str):
         result.append(path)
 
     return result
+    
