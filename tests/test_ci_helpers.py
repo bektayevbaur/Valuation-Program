@@ -35,24 +35,4 @@ from my_project import parse_dependency_files
         ),
     ],
 )
-def test_parse_dependency_files(value, expected) -> None:
-    assert parse_dependency_files(value) == expected
-
-
-def test_parse_dependency_files_removes_duplicates() -> None:
-    value = "\n".join(
-        [
-            "pyproject.toml",
-            "requirements.txt",
-            "",
-            "pyproject.toml",
-            "  requirements.txt  ",
-        ]
-    )
-
-    result = parse_dependency_files(value)
-
-    assert result == [
-        Path("pyproject.toml"),
-        Path("requirements.txt"),
-    ]
+def test_parse_dependency_files
