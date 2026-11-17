@@ -1,2 +1,11 @@
 # Valuation-Program
-CI
+
+Utility for parsing dependency file lists.
+
+## Installation
+
+## Usage
+
+## Testing
+
+## CI
