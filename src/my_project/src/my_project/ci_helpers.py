@@ -1,6 +1,7 @@
 from pathlib import Path
+from typing import List, Set
 
-PathList = list[Path]
+PathList = List[Path]
 
 
 def parse_dependency_files(value: str) -> PathList:
@@ -10,7 +11,7 @@ def parse_dependency_files(value: str) -> PathList:
         )
 
     result: PathList = []
-    seen = set()
+    seen: Set[Path] = set()
 
     for raw_line in value.splitlines():
         line = raw_line.strip()
