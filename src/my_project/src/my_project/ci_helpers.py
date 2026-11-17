@@ -1,13 +1,15 @@
 from pathlib import Path
-from typing import List
+
+PathList = list[Path]
 
 
-def parse_dependency_files(value: str) -> List not isinstance(value, str):
+def parse_dependency_files(value: str) -> PathList:
+    if not isinstance(value, str):
         raise TypeError(
             f"value must be str, got {type(value).__name__}"
         )
 
-    result: List[Path] = []
+    result: PathList = []
     seen = set()
 
     for raw_line in value.splitlines():
