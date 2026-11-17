@@ -3,7 +3,7 @@ from typing import List, Set
 
 
 def parse_dependency_files(value: str) -> Listif not isinstance(value, str):
-
+        raise TypeError(
             f"value must be str, got {type(value).__name__}"
         )
 
