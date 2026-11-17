@@ -1,9 +1,13 @@
+def parse_dependency_files(value: str) -> List```
+
+Полный корректный файл:
+
+```python
 from pathlib import Path
 from typing import List, Set
 
 
-def parse_dependency_files(value: str) -> List[Path]:
-    if not isinstance(value, str):
+def parse_dependency_files(value: str) -> Listif not isinstance(value, str):
         raise TypeError(
             f"value must be str, got {type(value).__name__}"
         )
